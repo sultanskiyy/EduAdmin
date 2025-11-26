@@ -4,18 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - EduAdmin</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class' }</script>
-    <style>
-        .menu-icon {
-            filter: brightness(0) invert(1);
-        }
-
-        .dark .menu-icon {
-            filter: none;
-        }
-    </style>
+    <title>Settings - EduAdmin</title>  
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen transition-all duration-300">
@@ -107,7 +98,6 @@
         </section>
     </main>
 
-    <script src="../js/main.js"></script>
 </body>
 
 </html>
