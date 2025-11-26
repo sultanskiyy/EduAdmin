@@ -169,76 +169,65 @@
         </section>
 
         <section>
-            <div id="submit-teacher"
-                class="fixed hidden top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-999">
+            <div id="outer-modal"
+                class="fixed hidden top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-[999]">
 
                 <form id="form"
                     class="max-w-[700px] w-full border-[1px] items-center border-blue-900  justify-between p-[20px] bg-white dark:bg-gray-800 rounded-[15px]">
 
                     <div class="grid grid-cols-2 mb-[20px] gap-[30px]">
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]"
-                            type="text" placeholder="FullName">
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]" type="number"
-                            placeholder="Age">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]"
-                            type="url" placeholder="Avatar">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]"
-                            type="email" placeholder="Email">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]" type="number"
-                            placeholder="Experience">
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]"
-                            type="text" placeholder="Profession">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]" type="text"
-                            placeholder="Linkedin">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]" type="number"
-                            placeholder="Phone">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]"
-                            type="number" placeholder="Rating">
-
-                        <input required
-                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]" type="text"
-                            placeholder="Telegram">
+                        <input required type="text" placeholder="FullName"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Age"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="url" placeholder="Avatar"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="email" placeholder="Email"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Experience"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Profession"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Linkedin"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Phone"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Rating"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Telegram"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
 
                         <div class="flex gap-[10px] ml-[300px] items-center">
-                            <input id="gender"
-                                class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]"
-                                type="checkbox" placeholder="Gender">
-                            <label for="gender">
-                                Male?
-                            </label>
+                            <input id="isMarried" type="checkbox"
+                                class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                            <label for="isMarried">Male?</label>
                         </div>
                     </div>
 
                     <div class="flex justify-center">
-                        <button
-                            class="border-[1px] max-w-[140px] w-full justify-center flex items-center bg-gradient-to-br from-blue-500 to-purple-600 justify-center border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">Submit</button>
-
+                        <button type="submit"
+                            class="border-[1px] max-w-[140px] w-full flex items-center bg-gradient-to-br from-blue-500 to-purple-600 border-blue-900 rounded-[5px] py-[4px] px-[8px]">
+                            Submit
+                        </button>
                     </div>
-
-
                 </form>
-
             </div>
+
         </section>
 
         <section class="my-[30px]">
             <div class="teacher-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
             </div>
+
+            <div class="flex items-center justify-center my-[30px]"> 
+                <nav aria-label="Page navigation example">
+                    <ul id="paganation" class="flex -space-x-px text-sm">
+                        
+                    </ul>
+                </nav>
+            </div>
+
+
         </section>
     </main>
 
