@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teachers</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen transition-all duration-300">
+
+    <header class="bg-white dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 sticky top-0 z-0 shadow-md">
+        <div class="mx-auto flex justify-between items-center px-6 py-5">
+            <h1 class="text-2xl lg:ml-[300px] lg:text-3xl font-semibold">School Management System</h1>
+            <button id="theme-toggle lg:ml-[150px]"
+                class="p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all">
+                <img src="../assets/image/sun.png" alt="Light" class="w-7 h-7 hidden dark:block">
+                <img src="../assets/image/moon (1).png" alt="Dark" class="w-7 h-7 block dark:hidden">
+            </button>
+        </div>
+    </header>
+
+    <aside
+        class="hidden lg:block fixed inset-y-0 left-0 w-72 bg-white dark:bg-gray-800 border-r border-gray-300 dark:border-gray-600 z-40 pt-6">
+        <div class="flex items-center justify-between px-6 pb-6">
+            <div class="flex items-center gap-3">
+                <img class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 p-2"
+                    src="../assets/image/student-alt.png" alt="Logo">
+                <span class="text-2xl font-bold">EduAdmin</span>
+            </div>
+        </div>
+
+        <hr class="border-gray-300 dark:border-gray-700 mx-6">
+
+        <nav class="mt-8 space-y-2 px-6">
+            <a href="../index.html" class="block">
+                <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    <img src="../assets/image/dashboard-monitor.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <span>Dashboard</span>
+                </div>
+            </a>
+            <a href="./techers.html" class="block">
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gray-700 transition font-medium">
+                    <img src="../assets/image/users.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <span>Teachers</span>
+                </div>
+            </a>
+            <a href="./students.html" class="block">
+                <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    <img src="../assets/image/student-alt.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <span>Students</span>
+                </div>
+            </a>
+            <a href="./settings.html" class="block">
+                <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    <img src="../assets/image/settings.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <span>Settings</span>
+                </div>
+            </a>
+        </nav>
+    </aside>
+
+    <div
+        class="lg:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-300 dark:border-gray-700 z-50">
+        <div class="flex justify-around py-3">
+            <a href="../index.html" class="p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl transition">
+                <img src="../assets/image/dashboard-monitor.png" class="w-7 h-7 mx-auto menu-icon" alt="">
+            </a>
+            <a href="./techers.html" class="p-3 bg-gray-100 dark:bg-gray-700 rounded-xl transition">
+                <img src="../assets/image/users.png" class="w-7 h-7 mx-auto menu-icon" alt="">
+            </a>
+            <a href="./students.html" class="p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl transition">
+                <img src="../assets/image/student-alt.png" class="w-7 h-7 mx-auto menu-icon" alt="">
+            </a>
+            <a href="./settings.html" class="p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl transition">
+                <img src="../assets/image/settings.png" class="w-7 h-7 mx-auto menu-icon" alt="">
+            </a>
+        </div>
+    </div>
+
+    <main class="max-w-[1600px] w-full lg:pl-80 pt-20 lg:pt-10 px-6 pb-24 lg:pb-10">
+        <section>
+            <div class="max-w-7xl mx-auto justify-between items-center">
+                <div>
+                    <div
+                        class="flex gap-[15px] mb-[20px] text-gray-900 hover:text-white px-[20px] py-[8px] hover:bg-zinc-900 duration-300 cursor-pointer rounded-full max-w-[200px] w-full items-center">
+                        <img class="object-cover" src="../assets/image/angle-small-left.png" alt="">
+                        <a href="../pages/techers.html" class="text-[14px] font-bold">Back to Teachers</a>
+                    </div>
+                    <div class="flex gap-[10px]">
+                        <a class="text-gray-400 cursor-pointer hover:text-blue-500"
+                            href="../index.html">Dashboard</a>/<a
+                            class="text-gray-400 cursor-pointer hover:text-blue-500"
+                            href="../pages/techers.html">Teachers</a>/<a href="">Name</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="outer-modal"
+                class="fixed hidden top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-[999]">
+
+                <form id="form"
+                    class="max-w-[700px] w-full border-[1px] items-center border-blue-900  justify-between p-[20px] bg-white dark:bg-gray-800 rounded-[15px]">
+
+                    <div class="grid grid-cols-2 mb-[20px] gap-[30px]">
+                        <input required type="text" placeholder="FullName"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Age"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="url" placeholder="Avatar"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="email" placeholder="Email"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Experience"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Profession"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Linkedin"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Phone"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Rating"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Telegram"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+
+                        <div class="flex gap-[10px] ml-[300px] items-center">
+                            <input id="isMarried" type="checkbox"
+                                class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                            <label for="isMarried">Male?</label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class="border-[1px] max-w-[140px] w-full flex items-center bg-gradient-to-br from-blue-500 to-purple-600 border-blue-900 rounded-[5px] py-[4px] px-[8px]">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="mt-[40px]">
+            <div id="single-teacher" class="flex gap-[30px]">
+                <div class="max-w-[400px] w-full bg-gray-800 rounded-2xl border-[1px] border-gray-600 p-[20px]">
+                    <div class="flex justify-center items-center">
+                        <img class="w-[150px] h-[150px] border-[5px] border-blue-900 object-cover rounded-full"
+                            src="../assets/image/negir.avif" alt="">
+                    </div>
+                    <div class="flex flex-col gap-[10px] justify-center items-center my-[10px]">
+                        <p>
+                            Nicole Bogan
+                        </p>
+                        <p
+                            class="px-[10px] py-[5px] bg-zinc-900 text-[12px] font-medium max-w-[100px] flex justify-center rounded-xl w-full">
+                            Physics
+                        </p>
+                    </div>
+                    <div class="grid text-[14px] gap-[5px]">
+                        <div class="flex justify-between">
+                            <p class="text-[gray]">Age</p>
+                            <p>46 years</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p class="text-[gray]">Experience</p>
+                            <p>34 years</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p class="text-[gray]">Gender</p>
+                            <p>Female</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p class="text-[gray]">Rating</p>
+                            <p class="flex items-center gap-[8px]"><img class="w-[16px] h-[16px] object-cover"
+                                    src="../assets/image/star (1).png" alt="">4.1
+                            </p>
+                        </div>
+                    </div>
+                    <div class="h-[8px] mt-[15px] rounded-[10px] w-full bg-[gray]">
+                        <div class="h-[8px] w-[75%] bg-white rounded-[10px]"></div>
+                    </div>
+                    <div class="mt-[25px]">
+                        <button
+                            class="flex max-w-[400px] rounded-[10px] cursor-pointer w-full bg-white text-black py-[10px]  items-center gap-[20px] justify-center">
+                            <img src="../assets/image/pencil (2).png" alt="">Edit Profile
+                        </button>
+                    </div>
+                </div>
+                <div class="max-w-[800px] w-full bg-gray-800 rounded-2xl border-[1px] border-gray-600 p-[30px]">
+                    <div class="bg-stone-900 w-full px-[110px] py-[5px] rounded-2xl mx-auto flex justify-between">
+                        <button id="btn1" class="text-white cursor-pointer transition-all duration-200">Contact
+                            Info</button>
+                        <button id="btn2" class="text-gray-400 cursor-pointer transition-all duration-200">Assigned
+                            Students</button>
+                    </div>
+                    <div class="mt-[20px]">
+
+                        <div id="contact-info" class="max-w-[800px] grid gap-[20px] grid-cols-2 w-full">
+                            <div class="flex py-[10px] px-[20px] rounded-xl bg-gray-700 items-center gap-[20px]">
+                                <img class="object w-[24px] h-[24px]" src="../assets/image/phone-call.png" alt="">
+                                <div>
+                                    <p class="text-[14px] text-[gray]">Phone</p>
+                                    <p>(968) 598-2675 x147</p>
+                                </div>
+                            </div>
+
+                            <div class="flex py-[10px] px-[20px] rounded-xl bg-gray-700 items-center gap-[20px]">
+                                <img class="object w-[24px] h-[24px]" src="../assets/image/envelope.png" alt="">
+                                <div>
+                                    <p class="text-[14px] text-[gray]">Email</p>
+                                    <p>Abel.Moen83@yahoo.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex py-[10px] px-[20px] rounded-xl bg-gray-700 items-center gap-[20px]">
+                                <img class="object w-[24px] h-[24px]" src="../assets/image/paper-plane.png" alt="">
+                                <div>
+                                    <p class="text-[14px] text-[gray]">Telegram</p>
+                                    <p>@abelmoen</p>
+                                </div>
+                            </div>
+
+                            <div class="flex py-[10px] px-[20px] rounded-xl bg-gray-700 items-center gap-[20px]">
+                                <img class="object w-[24px] h-[24px]" src="../assets/image/linkedin.png" alt="">
+                                <div>
+                                    <p class="text-[14px] text-[gray]">LinkedIn</p>
+                                    <p>linkedin.com/in/abel-moen</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="assigned-students" class="hidden max-w-[800px] w-full">
+                            <div class="teacher-students h-[300px] overflow-y-scroll flex flex-col gap-[20px]">
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/single-teacher.js"></script>
+    <script>
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+
+        btn1.addEventListener("click", () => {
+            btn1.classList.remove("text-gray-400");
+            btn1.classList.add("text-white");
+
+            btn2.classList.remove("text-white");
+            btn2.classList.add("text-gray-400");
+        });
+
+        btn2.addEventListener("click", () => {
+            btn2.classList.remove("text-gray-400");
+            btn2.classList.add("text-white");
+
+            btn1.classList.remove("text-white");
+            btn1.classList.add("text-gray-400");
+        });
+    </script>
+    <script>
+        const contactInfo = document.getElementById("contact-info");
+        const assigned = document.getElementById("assigned-students");
+
+        btn1.addEventListener("click", () => {
+            // Tugma ranglari
+            btn1.classList.add("text-white");
+            btn1.classList.remove("text-gray-400");
+            btn2.classList.add("text-gray-400");
+            btn2.classList.remove("text-white");
+
+            // Sahifalarni almashtirish
+            contactInfo.classList.remove("hidden");
+            contactInfo.classList.add("grid");
+
+            assigned.classList.add("hidden");
+        });
+
+        btn2.addEventListener("click", () => {
+            btn2.classList.add("text-white");
+            btn2.classList.remove("text-gray-400");
+            btn1.classList.add("text-gray-400");
+            btn1.classList.remove("text-white");
+
+            contactInfo.classList.add("hidden");
+            assigned.classList.remove("hidden");
+        });
+    </script>
+</body>
+
+</html>

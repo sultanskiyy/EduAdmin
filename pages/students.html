@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students - EduAdmin</title>
+    <title>student</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -38,28 +38,32 @@
         <nav class="mt-8 space-y-2 px-6">
             <a href="../index.html" class="block">
                 <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-                    <img src="../assets/image/dashboard-monitor.png" class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <img src="../assets/image/dashboard-monitor.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
                     <span>Dashboard</span>
                 </div>
             </a>
 
             <a href="./techers.html" class="block">
                 <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-                    <img src="../assets/image/users.png" class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <img src="../assets/image/users.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
                     <span>Teachers</span>
                 </div>
             </a>
 
             <a href="./students.html" class="block">
-                <div class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gray-700 transition font-medium">
-                    <img src="../assets/image/student-alt.png" class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                <div class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gradient-to-br from-blue-500 to-purple-600 transition font-medium">
+                    <img src="../assets/image/student-alt.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
                     <span>Students</span>
                 </div>
             </a>
 
             <a href="./settings.html" class="block">
                 <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-                    <img src="../assets/image/settings.png" class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
+                    <img src="../assets/image/settings.png"
+                        class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
                     <span>Settings</span>
                 </div>
             </a>
@@ -85,14 +89,144 @@
     </div>
 
     <main class="lg:pl-80 pt-20 lg:pt-10 px-6 pb-24 lg:pb-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-10">
-                <h1 class="text-3xl lg:text-4xl font-bold mb-3">Students</h1>
-                <p class="text-gray-600 dark:text-gray-400 text-lg">View and manage all students in the system</p>
+        <section>
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div>
+                    <h1 class="text-3xl lg:text-[20px] font-minibold mb-2">Students</h1>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Showing 80 of 80 students</p>
+                </div>
+                <div>
+                    <button id="add-teacher-btn"
+                        class="rounded-[10px] py-[6px] px-[15px] bg-gradient-to-br from-blue-500 to-purple-600">
+                        + Add Student
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <div class="max-w-7xl mx-auto">
+                <input type="search" placeholder="Search teachers by name, email, or profession"
+                    class="w-full py-[8px] px-[18px] rounded-[10px] border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 mb-6 focus:outline-none" />
+            </div>
+        </section>
+
+        <section>
+            <div class="flex flex-wrap gap-5 overflow-x-auto md:overflow-x-visible py-2 px-2">
+                <form class="outline-none">
+                    <select
+                        class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[140px] py-[5px] px-[15px]"
+                        name="gender" id="gender">
+                        <option class="" value="">All Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </form>
+
+                <form class="outline-none">
+                    <select
+                        class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
+                        name="gender" id="gender">
+                        <option class="" value="">All Age</option>
+                        <option value="">0-10 years</option>
+                        <option value="">11-14 years</option>
+                        <option value="">15-18 years</option>
+                    </select>
+                </form>
+
+                <form class="outline-none">
+                    <select
+                        class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
+                        name="gender" id="gender">
+                        <option class="" value="">All Grade</option>
+                        <option value="">Grade 1-4</option>
+                        <option value="">Grade 5-8</option>
+                        <option value="">Grade 9-12</option>
+                    </select>
+                </form>
+
+                <form class="outline-none">
+                    <select
+                        class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
+                        name="gender" id="gender">
+                        <option class="" value="">All Rating</option>
+                        <option value="">4.5+ stars</option>
+                        <option value="">4.0+ stars</option>
+                        <option value="">3.5+ stars</option>
+                    </select>
+                </form>
+
+                <button
+                    class="flex hidden items-center gap-2 bg-gray-200 dark:bg-black py-[6px] px-[12px] rounded-[10px]">
+                    <img class="object-cover" src="../assets/image/cross-small.png" alt="">
+                    <p>Clear Filters</p>
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div id="outer-modal"
+                class="fixed hidden top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-[999]">
+
+                <form id="form"
+                    class="max-w-[700px] w-full border-[1px] items-center border-blue-900  justify-between p-[20px] bg-white dark:bg-gray-800 rounded-[15px]">
+
+                    <div class="grid grid-cols-2 mb-[20px] gap-[30px]">
+                        <input required type="text" placeholder="FullName"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Age"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="url" placeholder="Avatar"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="email" placeholder="Email"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Experience"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Profession"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Linkedin"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Phone"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="number" placeholder="Rating"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                        <input required type="text" placeholder="Telegram"
+                            class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+
+                        <div class="flex gap-[10px] ml-[300px] items-center">
+                            <input id="isMarried" type="checkbox"
+                                class="border-[1px] border-blue-900 rounded-[5px] py-[4px] outline-none px-[8px]">
+                            <label for="isMarried">Male?</label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class="border-[1px] max-w-[140px] w-full flex items-center bg-gradient-to-br from-blue-500 to-purple-600 border-blue-900 rounded-[5px] py-[4px] px-[8px]">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="my-[30px]">
+            <div class="teacher-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
+                
+            </div>
+
+            <div class="flex items-center justify-center my-[30px]">
+                <nav aria-label="Page navigation example">
+                    <ul id="paganation" class="flex items-center gap-[5px] -space-x-px text-sm">
+
+                    </ul>
+                </nav>
+            </div>
+        </section>
     </main>
 
+    <script src="../js/student.js"></script>
 </body>
 
 </html>
