@@ -5,22 +5,16 @@ let addTeacherBtn = document.getElementById("add-teacher-btn");
 let selected = null;
 let pagination = document.getElementById("paganation");
 let page = 1;
-
 let sortName = document.getElementById("sortName");
 let sortNameValue = "default";
-
 let search = document.getElementById("search");
 let searchValue = "";
-
 let filterProfession = document.getElementById("filterProfession");
 let filterProfessionValue = "";
-
 let filterGender = document.getElementById("filterGender");
 let filterGenderValue = "";
-
 let filterExperience = document.getElementById("filterExperience");
 let filterRating = document.getElementById("filterRating");
-
 let experienceValue = "";
 let ratingValue = "";
 
@@ -212,8 +206,6 @@ form.addEventListener("submit", async e => {
 });
 
 async function deleteTeacher(id) {
-    if (confirm("O‘chirishni xohlaysizmi?")) {
         await axios.delete(`https://692584e782b59600d723f9b8.mockapi.io/teachers/${id}`);
         getData();
-    }
 }
