@@ -43,7 +43,8 @@
                 </div>
             </a>
             <a href="./techers.html" class="block">
-                <div class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gradient-to-br from-blue-500 to-purple-600 transition font-medium">
+                <div
+                    class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gradient-to-br from-blue-500 to-purple-600 transition font-medium">
                     <img src="../assets/image/users.png"
                         class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
                     <span>Teachers</span>
@@ -102,7 +103,7 @@
 
         <section>
             <div class="max-w-7xl mx-auto">
-                <input type="search" placeholder="Search teachers by name, email, or profession"
+                <input id="search" type="search" placeholder="Search teachers by name, email, or profession"
                     class="w-full py-[8px] px-[18px] rounded-[10px] border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 mb-6 focus:outline-none" />
             </div>
         </section>
@@ -112,17 +113,17 @@
                 <form class="outline-none">
                     <select
                         class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[140px] py-[5px] px-[15px]"
-                        name="gender" id="gender">
-                        <option class="" value="">All Gender</option>
+                        name="gender" id="filterGender">
+                        <option value="">All Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </form>
 
                 <form class="outline-none">
-                    <select
+                    <select id="filterExperience"
                         class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
-                        name="gender" id="gender">
+                        name="gender">
                         <option class="" value="">All Experience</option>
                         <option value="">0-5 years</option>
                         <option value="">6-10 years</option>
@@ -132,9 +133,9 @@
                 </form>
 
                 <form class="outline-none">
-                    <select
+                    <select id="filterRating"
                         class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
-                        name="gender" id="gender">
+                        name="gender">
                         <option class="" value="">All Rating</option>
                         <option value="">4.5+ stars</option>
                         <option value="">4.0+ stars</option>
@@ -143,20 +144,19 @@
                 </form>
 
                 <form class="outline-none">
+                    <select id="filterProfession"
+                        class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
+                        name="gender">
+                        <option value="">All Profession</option>
+                    </select>
+                </form>
+                <form>
                     <select
                         class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
-                        name="gender" id="gender">
-                        <option class="" value="">All Profession</option>
-                        <option value="">History</option>
-                        <option value="">Biology</option>
-                        <option value="">Music</option>
-                        <option value="">Physics</option>
-                        <option value="">Computer Science</option>
-                        <option value="">Mathematics</option>
-                        <option value="">English Literature</option>
-                        <option value="">Art</option>
-                        <option value="">Chemistry</option>
-                        <option value="">Physical Education</option>
+                        id="sortName">
+                        <option value="default">Default</option>
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
                     </select>
                 </form>
 
@@ -219,10 +219,10 @@
             <div class="teacher-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
             </div>
 
-            <div class="flex items-center justify-center my-[30px]"> 
+            <div class="flex items-center justify-center my-[30px]">
                 <nav aria-label="Page navigation example">
                     <ul id="paganation" class="flex items-center gap-[5px] -space-x-px text-sm">
-                        
+
                     </ul>
                 </nav>
             </div>

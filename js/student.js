@@ -6,6 +6,7 @@ let selected = null;
 let paganation = document.getElementById("paganation");
 let page = 1;
 
+
 addTeacherBtn.addEventListener("click", function () {
     outerModal.classList.remove("hidden");
     for (let el of form) {
@@ -64,7 +65,7 @@ async function getData(content, page) {
 
                         <div class="flex items-center gap-2 mt-1">
                             <span class="border-[1px] border-blue-600 text-blue-600 text-sm px-3 py-[2px] rounded-lg">
-                                ${el.grade}
+                                Grade ${el.grade}
                             </span>
                             <span class="text-gray-300">${el.age}</span>
                         </div>

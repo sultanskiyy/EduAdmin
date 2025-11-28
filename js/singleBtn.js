@@ -1,4 +1,3 @@
-// Elementlarni olish
 const buttons = {
     contact: document.getElementById("btn-contact"),
     students: document.getElementById("btn-students"),
@@ -11,12 +10,10 @@ const contents = {
     stats: document.getElementById("content-stats")
 };
 
-// Barcha contentlarni yashirish
 function hideAll() {
     Object.values(contents).forEach(content => content.classList.add("hidden"));
 }
 
-// Buttonlarni reset qilish
 function resetButtons() {
     Object.values(buttons).forEach(btn => {
         btn.classList.remove("text-white");
@@ -24,7 +21,6 @@ function resetButtons() {
     });
 }
 
-// Tabni faollashtirish
 function activate(tab) {
     hideAll();
     resetButtons();
@@ -33,12 +29,10 @@ function activate(tab) {
     buttons[tab].classList.add("text-white");
 }
 
-// Event listenerlarni qo‘shish
 buttons.contact.addEventListener("click", () => activate("contact"));
 buttons.students.addEventListener("click", () => activate("students"));
 buttons.stats.addEventListener("click", () => activate("stats"));
 
-// Boshlang‘ich faollashtirish — Contact Info ochiq bo‘lsin
 activate("contact");
 
 

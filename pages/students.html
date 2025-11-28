@@ -53,7 +53,8 @@
             </a>
 
             <a href="./students.html" class="block">
-                <div class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gradient-to-br from-blue-500 to-purple-600 transition font-medium">
+                <div
+                    class="flex items-center gap-4 p-3 rounded-xl bg-gray-100 dark:bg-gradient-to-br from-blue-500 to-purple-600 transition font-medium">
                     <img src="../assets/image/student-alt.png"
                         class="w-[34px] h-[34px] bg-blue-500 rounded-[10px] p-[5px] menu-icon" alt="">
                     <span>Students</span>
@@ -156,6 +157,16 @@
                     </select>
                 </form>
 
+                <form>
+                    <select
+                        class="bg-gray-800 border-[1px] text-[14px] border-gray-600 rounded-[10px] outline-none w-[170px] py-[5px] px-[15px]"
+                        id="sortName">
+                        <option value="default">Default</option>
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
+                    </select>
+                </form>
+
                 <button
                     class="flex hidden items-center gap-2 bg-gray-200 dark:bg-black py-[6px] px-[12px] rounded-[10px]">
                     <img class="object-cover" src="../assets/image/cross-small.png" alt="">
@@ -213,7 +224,7 @@
 
         <section class="my-[30px]">
             <div class="teacher-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
-                
+
             </div>
 
             <div class="flex items-center justify-center my-[30px]">
