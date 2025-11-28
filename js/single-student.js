@@ -24,9 +24,9 @@ async function getData() {
                 <div class="flex justify-between text-gray-300"><p>Age</p><p>${student.age}</p></div>
                 <div class="flex justify-between text-gray-300"><p>Gender</p><p>${student.gender ? "Male" : "Female"}</p></div>
                 <div class="flex justify-between text-gray-300"><p>Rating</p><p class="flex items-center gap-2"><img class="w-4 h-4" src="../assets/image/star (1).png" alt="">${student.raiting}</p></div>
-                <div class="w-full bg-gray-700 h-[8px] rounded-full mt-2"><div style="width:${student.raiting}%" class="bg-white h-[8px] rounded-full"></div></div>
+                <div class="w-full bg-gray-700 h-[8px] rounded-full mt-2"><div style="width:${student.raiting * 20}%" class="bg-white h-[8px] rounded-full"></div></div>
                 <div class="flex justify-between text-gray-300"><p>Coins</p><p class="flex items-center gap-2"><img class="w-4 h-4" src="../assets/image/coins.png" alt="">${student.coins}</p></div>
-                <div class="w-full bg-gray-700 h-[8px] rounded-full mt-2"><div style="width:${student.coins}%" class="bg-white h-[8px] rounded-full"></div></div>
+                <div class="w-full bg-gray-700 h-[8px] rounded-full mt-2"><div style="width:${(student.coins * 100)/1000}%" class="bg-white h-[8px] rounded-full"></div></div>
             </div>
         </div>
 
@@ -99,7 +99,7 @@ async function getData() {
                                     <p class="text-gray-400">/</p>
                                     <p id="teacher-phone" class="text-gray-400">5.0</p>
                                 </div>
-                                <div class="w-full bg-gray-800 h-[8px] rounded-full mt-2"><div style="width:${student.raiting}%" class="bg-white h-[8px] rounded-full"></div></div>
+                                <div class="w-full bg-gray-800 h-[8px] rounded-full mt-2"><div style="width:${student.raiting * 20}%" class="bg-white h-[8px] rounded-full"></div></div>
                             </div>
 
                             <div class="w-full bg-gradient-to-br from-orange-800 to-orange-400 transition items-center gap-4 bg-gray-700 p-3 rounded-xl">
@@ -112,7 +112,7 @@ async function getData() {
                                     <p class="text-gray-400">/</p>
                                     <p id="teacher-phone" class="text-gray-400">1000</p>
                                 </div>
-                                <div class="w-full bg-gray-800 h-[8px] rounded-full mt-2"><div style="width:${student.coins}%" class="bg-white h-[8px] rounded-full"></div></div>
+                                <div class="w-full bg-gray-800 h-[8px] rounded-full mt-2"><div style="width:${(student.coins*100)/1000}%" class="bg-white h-[8px] rounded-full"></div></div>
                             </div>
 
                             <div class="w-full bg-gradient-to-br from-green-950 to-green-700 transition items-center gap-4 bg-gray-700 p-3 rounded-xl">

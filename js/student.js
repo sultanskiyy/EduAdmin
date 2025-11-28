@@ -76,7 +76,7 @@ async function getData(content, page) {
 
                         <div class="w-full bg-gray-700 h-[8px] rounded-full mt-2">
                             <div
-                            style="width: ${el.raiting}%"
+                            style="width: ${el.raiting * 20}%"
                             class="bg-white h-[8px] rounded-full""></div>
                         </div>
 
