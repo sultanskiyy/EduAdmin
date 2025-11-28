@@ -55,8 +55,10 @@ async function getData(content, page) {
                 <div class="teacher-card max-w-[300px] w-full" data-id="${el.id} transition-transform duration-300 hover:-translate-y-[5px]">
                     <div class="group flex flex-col items-center bg-gray-800 rounded-[20px] border border-gray-700 p-6 shadow-lg">
 
-                        <img class="w-[100px] h-[100px] rounded-full object-cover ring-4 ring-purple-500"
+                        <a href="../pages/single-student.html?studentId=${el.id}">
+                        <img class="w-[100px] h-[100px] rounded-full border-[4px] border-blue-500 object-cover"
                             src="${el.avatar}" alt="">
+                        </a>
 
                         <p class="text-white line-clamp-1 text-xl font-semibold mt-3">${el.name}</p>
 

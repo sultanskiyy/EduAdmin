@@ -25,6 +25,10 @@ async function getData() {
                             <span>${teacher.raiting}</span>
                         </span>
                     </div>
+                    <div class="w-full bg-gray-700 h-[8px] rounded-full mt-2">
+                        <div style="width: ${teacher.raiting * 20}%;" 
+                        class="bg-white h-[8px] rounded-full"></div>
+                    </div>
                 </div>
                 <div class="mt-6 w-full">
                     <button class="flex w-full justify-center items-center gap-2 bg-white text-black py-2 rounded-xl">
@@ -33,9 +37,7 @@ async function getData() {
                 </div>
             </div>
 
-            <!-- O'ng panel -->
             <div class="flex-1 w-full bg-gray-800 rounded-2xl border border-gray-600 p-6 flex flex-col">
-                <!-- Buttons container with reduced padding -->
                 <div class="flex justify-center gap-4 bg-stone-900 py-1.5 rounded-xl">
                     <button id="btn1" class="px-4 py-1 text-white rounded">Contact Info</button>
                     <button id="btn2" class="px-4 py-1 text-gray-400 rounded">Assigned Students</button>
@@ -61,7 +63,6 @@ async function getData() {
                 </div>
 
                 <div id="assigned-students" class="hidden flex flex-col gap-4 mt-5 overflow-y-auto">
-                    <!-- Students will be loaded here -->
                 </div>
             </div>
         </div>
@@ -74,7 +75,9 @@ async function getData() {
             studentContainer.innerHTML += `
             <div class="flex justify-between items-center p-3 bg-gray-700 rounded-xl w-full">
                 <div class="flex items-center gap-3">
+                    <a href="../pages/single-student.html?studentId=${el.id}">
                     <img class="w-14 h-14 rounded-full object-cover" src="${el.avatar}" alt="">
+                    </a>
                     <div>
                         <p class="text-white">${el.name}</p>
                         <p class="text-gray-400 text-sm">Grade ${el.grade} — ${el.age} y.o.</p>
