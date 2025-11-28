@@ -4,7 +4,6 @@ let singleTeacher = document.getElementById("single-teacher");
 
 async function getData() {
     try {
-        // Teacher data
         let res = await axios.get(`https://692584e782b59600d723f9b8.mockapi.io/teachers/${id}`);
         const teacher = res.data;
 
@@ -68,7 +67,6 @@ async function getData() {
         </div>
         `;
 
-        // Load students
         let res2 = await axios.get(`https://692584e782b59600d723f9b8.mockapi.io/teachers/${id}/students`);
         let studentContainer = document.querySelector("#assigned-students");
         studentContainer.innerHTML = '';
@@ -90,7 +88,6 @@ async function getData() {
             `;
         });
 
-        // Buttons toggle
         const btn1 = document.getElementById("btn1");
         const btn2 = document.getElementById("btn2");
         const contactInfo = document.getElementById("contact-info");
